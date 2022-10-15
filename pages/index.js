@@ -6,7 +6,6 @@ import Header from "../components/Header";
 import { LargeCard } from "../components/LargeCard";
 import { MediumCard } from "../components/MediumCard";
 import { SmallCard } from "../components/SmallCard";
-import styles from "../styles/Home.module.css";
 
 export default function Home({ exploreData, cardsData }) {
   return (
@@ -14,6 +13,10 @@ export default function Home({ exploreData, cardsData }) {
       <Head>
         <title>Airbnb</title>
         <meta name="description" content="Airbnb demo page" />
+        <link
+          href="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css"
+          rel="stylesheet"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

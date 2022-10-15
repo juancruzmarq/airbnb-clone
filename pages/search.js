@@ -5,7 +5,7 @@ import { FilterIcon } from "@heroicons/react/outline";
 import { useRouter } from "next/router";
 import { format } from "date-fns";
 import { InfoCard } from "../components/InfoCard";
-import { Map } from "../components/Map";
+import MapComponent from "../components/Map";
 
 export default function Search({ searchResults }) {
   const router = useRouter();
@@ -17,7 +17,7 @@ export default function Search({ searchResults }) {
   const range = `${formattedStartDate} - ${formattedEndDate}`;
 
   return (
-    <div className="">
+    <div>
       <Header placeholder={`${location} | ${range} | ${noOfGuests}`} />
 
       <main className="flex">
@@ -56,8 +56,9 @@ export default function Search({ searchResults }) {
             )}
           </div>
         </section>
-        <section className="hidden xl:inline-flex xl:min-w-[700px]">
-          <Map></Map>
+
+        <section className="hidden xl:inline-flex xl:min-w-[600px]">
+          <MapComponent searchResults={searchResults} />
         </section>
       </main>
 
